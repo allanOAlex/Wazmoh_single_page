@@ -1,0 +1,295 @@
+﻿
+
+
+.article {
+    display: none;
+}
+
+    .article.show {
+        display: block;
+    }
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+/*.fade-in.active {
+    opacity: 1;
+}*/
+
+.fade-in-left {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.fade-in-top {
+    animation: fadeInTop 1s ease-in-out;
+}
+
+.fade-in-bottom {
+    animation: fadeInBottom 1s ease-in-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/*.slide-in-left.active {
+    transform: translateX(0);
+}*/
+
+.slide-in-right {
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slide-in-top {
+    animation: slideInTop 1s ease-in-out;
+}
+
+    /*.slide-in-top.active {
+        transform: scale(1);
+    }*/
+
+.slide-in-bottom {
+    animation: slideInBottom 1s ease-in-out;
+}
+
+
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+}
+
+.fade-out-down {
+    animation-name: fadeOutDown;
+    animation-duration: 1s;
+}
+
+
+.zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/*.zoom-in.active {
+    transform: scale(1);
+}*/
+
+.zoomInPerspective {
+    animation-name: zoomInPerspective;
+    animation-duration: 1.5s;
+}
+
+.zoomInBounce {
+    animation-name: zoomInBounce;
+    animation-duration: 1s;
+}
+
+.zoomInRotate {
+    animation-name: zoomInRotate;
+    animation-duration: 1s;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-30%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInPerspective {
+    from {
+        opacity: 0;
+        transform: perspective(600px) translate3d(0, 0, -200px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: perspective(600px) translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(600px) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomInBounce {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes zoomInRotate {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3) rotateZ(-45deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1) rotateZ(0deg);
+    }
+}
+
